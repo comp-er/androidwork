@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 레이아웃은 취향 -->
+<!-- 뎁스는 4이상 쓰지말자 -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_above="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_green_light"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/my_nav_items" />
+
+</RelativeLayout>
