@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,12 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private  SingleAdapter adapter;
 
-    private List<String> mid = Arrays.asList(
-            "가","나","다","라","마","바","사","아",
-            "가","나","다","라","마","바","사","아",
-            "가","나","다","라","마","바","사","아",
-            "가","나","다","라","마","바","사","아"
-    );
+//    private List<Movie> mid = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.list_view);
         adapter = new SingleAdapter();
-        adapter.addItems(mid);
+//        adapter.addItems(mid);
         listView.setAdapter(adapter);
 
     }
