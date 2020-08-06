@@ -18,12 +18,30 @@ public class Contact {
     @ColumnInfo(name="contact_email")
     private String email;
 
+    @ColumnInfo(name="contact_profile")
+    private String profile;
+
     @Ignore
     public Contact() { }
 
     public Contact(String name, String email) {
         this.name = name;
         this.email = email;
+    }
+
+    @Ignore
+    public Contact(long id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    @Ignore
+    public Contact(long id, String name, String email, String profile) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.profile = profile;
     }
 
     public long getId() {
@@ -48,6 +66,14 @@ public class Contact {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 }
 
