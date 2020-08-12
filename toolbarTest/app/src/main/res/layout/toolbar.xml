@@ -18,11 +18,12 @@
         android:textSize="25sp"
         android:text="TextView" />
 
-    <ImageView
 
+    <ImageView
         android:id="@+id/imageView"
         android:layout_alignParentRight="true"
         android:layout_width="50dp"
         android:layout_height="match_parent"
         app:srcCompat="@drawable/ic_menu" />
+
 </RelativeLayout>
