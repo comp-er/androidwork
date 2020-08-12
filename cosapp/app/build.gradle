@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.jaybon.mvvmex01"
+        applicationId "com.jaybon.cosapp"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -20,12 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    dataBinding {
-        enabled = true
-    }
-
 }
+
+// firebase
+apply plugin: 'com.google.gms.google-services'
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -35,18 +33,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Material
-    implementation 'com.google.android.material:material:1.2.0-alpha02'
+    //firebase
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
 
-    // LifeCycle
-    def lifecycle_version = "2.0.0"
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
-
-    // Room
-    def room_version = "2.2.0-alpha02"
-
-    implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    //firebase 이메일 가입
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
 
 }
