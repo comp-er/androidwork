@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        // 통신이 성공하면 이쪽으로 이동
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -113,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        // 통신이 성공하면 이쪽으로 이동
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
