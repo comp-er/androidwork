@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "543712161082",
+    "firebase_url": "https://mvvm-databinding-firestore-1.firebaseio.com",
+    "project_id": "mvvm-databinding-firestore-1",
+    "storage_bucket": "mvvm-databinding-firestore-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543712161082:android:a21b944ab35dbbb247f403",
+        "android_client_info": {
+          "package_name": "com.example.mvvmbindingfirestore1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543712161082-i32j0k19f3nt8ldm7veen1ctgm25i9kh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mvvmbindingfirestore1",
+            "certificate_hash": "bba0e32304967199827fbf5d9af84f5c0405deb2"
+          }
+        },
+        {
+          "client_id": "543712161082-mit1inssvatpsejpcgfpgq40923klplu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIsPIiadYKGexzyXIbNsifI1T9vxZYi6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543712161082-mit1inssvatpsejpcgfpgq40923klplu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
