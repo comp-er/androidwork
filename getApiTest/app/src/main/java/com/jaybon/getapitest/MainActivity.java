@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
                 RiotService service = retrofit.create(RiotService.class);
 
-                Call<UserInfo> call = service.userInfo();
+                Call<UserInfo> call = service.userInfo("포식 베이가");
                 call.enqueue(new Callback<UserInfo>() {
                     @Override
                     public void onResponse(Call<UserInfo> call, Response<UserInfo> response) {
