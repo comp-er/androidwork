@@ -1,13 +1,13 @@
 package com.jaybon.retrofitcallbacktest;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,8 +40,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+//                Orianna.setRiotAPIKey("RGAPI-8f2ab161-b201-4d25-a846-17abf656e8e7");
+//                Orianna.setDefaultRegion(Region.KOREA);
+
+
+//                Summoner summoner = Orianna.summonerNamed("원모타임").get();
+
+//                Log.d(TAG, "onClick: "+summoner.getName() + summoner.getLevel());
+
+
+
                 // 1단계
-                Call<Summoner> call = service.getSummonerByName("포식 베이가");
+                Call<Summoner> call = service.getSummonerByName("hideonbush");
                 call.enqueue(new Callback<Summoner>() {
                     @Override
                     public void onResponse(Call<Summoner> call, Response<Summoner> response) {
@@ -52,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         Summoner summoner = response.body();
-
+                        Log.d(TAG, "onResponse: "+summoner.getSummonerLevel());
 
                         // 2단계
                         Call<Matchlist> call1 = service.getMatchListByAccountId(summoner.getAccountId());

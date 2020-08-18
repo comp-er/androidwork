@@ -1,12 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    // 오리아나 컴파일 옵션
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     compileSdkVersion 29
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.jaybon.retrofitcallbacktest"
-        minSdkVersion 21
+        applicationId "com.jaybon.oriannatest"
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -20,6 +27,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -30,17 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // 레트로핏
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-
-    // gson
-    implementation group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.3.0'
-
-    //롬복
-    compileOnly 'org.projectlombok:lombok:1.18.12'
-    annotationProcessor 'org.projectlombok:lombok:1.18.12'
-
-//    // 라이엇 api
-//    implementation "com.merakianalytics.orianna:orianna-android:4.0.0-rc7"
+    // 오리아나
+    implementation "com.merakianalytics.orianna:orianna-android:4.0.0-rc7"
 
 }
