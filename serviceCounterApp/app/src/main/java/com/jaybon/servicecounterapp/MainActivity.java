@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnStop;
     private boolean running = true;
     private Handler handler = new Handler();
+    private boolean isServicerunning = false;
 
     private InterfaceCounterService binder;
 
@@ -88,7 +89,10 @@ public class MainActivity extends AppCompatActivity {
 
                 // serviceConnection자리에는 서비스와 연결했다는 정보를 넘겨야한다
 
-                bindService(intent, connection, BIND_AUTO_CREATE);
+                if(!isServicerunning){
+                    bindService(intent, connection, BIND_AUTO_CREATE);
+                    isServicerunning = !isServicerunning;
+                }
 
                 new Thread(new Runnable() {
                     @Override
@@ -127,7 +131,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CounterService.class);
 //                stopService(intent);
-                unbindService(connection); // 인텐트 없이 커넥션을 넘긴다
+                if(isServicerunning){
+                    unbindService(connection); // 인텐트 없이 커넥션을 넘긴다
+                    isServicerunning = !isServicerunning;
+                }
                 running = false;
             }
         });
